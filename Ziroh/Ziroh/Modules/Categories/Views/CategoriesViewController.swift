@@ -66,7 +66,7 @@ class CategoriesViewController: BaseViewController {
         tableView.register(UINib(nibName: Constants.Categories.TableView.headerCell, bundle: nil), forCellReuseIdentifier: Constants.Categories.TableView.headerCell)
         tableView.register(UINib(nibName: Constants.Categories.TableView.dividerCell, bundle: nil), forCellReuseIdentifier: Constants.Categories.TableView.dividerCell)
         tableView.register(UINib(nibName: Constants.Categories.TableView.webInfoCell, bundle: nil), forCellReuseIdentifier: Constants.Categories.TableView.webInfoCell)
-
+        tableView.register(UINib(nibName: Constants.Categories.TableView.categoriesInfoCell, bundle: nil), forCellReuseIdentifier: Constants.Categories.TableView.categoriesInfoCell)
     }
     
     private func setViewConstrains() {
@@ -105,6 +105,7 @@ extension CategoriesViewController: UISearchBarDelegate {
     }
 }
 
+//MARK: - WebInfo Protocol
 extension CategoriesViewController: WebInfoProtocol {
     func copy() {
         let alert = UIAlertController(title: "Web Copy", message: "", preferredStyle: .alert)

@@ -28,6 +28,11 @@ struct Constants {
             static let headerCell = "HeaderTableViewCell"
             static let dividerCell = "DividerTableViewCell"
             static let webInfoCell = "WebInfoTableViewCell"
+            static let categoriesInfoCell = "CategoriesInfoTableViewCell"
+        }
+        
+        struct CollectionView {
+            static let categorieInfoCell = "CategorieInfoCollectionViewCell"
         }
     }
     

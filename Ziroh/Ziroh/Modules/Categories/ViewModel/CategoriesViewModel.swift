@@ -31,13 +31,23 @@ class CategoriesViewModel: CategoriesProtocol {
         cells.removeAll()
         cells.append(.divider)
         cells.append(.header(title: "Categories"))
+        cells.append(.categories(data: [CategoriesInfo(title: "Notes"),
+                                        CategoriesInfo(title: "Websites"),
+                                        CategoriesInfo(title: "Emails"),
+                                        CategoriesInfo(title: "Notes"),
+                                        CategoriesInfo(title: "Websites"),
+                                        CategoriesInfo(title: "Emails"),
+                                        CategoriesInfo(title: "Notes"),
+                                        CategoriesInfo(title: "Websites"),
+                                        CategoriesInfo(title: "Emails")
+                                       ]))
         cells.append(.divider)
         cells.append(.header(title: "Favourites", isButtonAvailable: true))
-        cells.append(.webInfo(title: "Website Name", subTitle: "Password", date: formattedDate))
-        cells.append(.webInfo(title: "Google Name", subTitle: "Password", date: formattedDate))
-        cells.append(.webInfo(title: "Facebook Name", subTitle: "Password", date: formattedDate))
-        cells.append(.webInfo(title: "Instagram Name", subTitle: "Password", date: formattedDate))
-        cells.append(.webInfo(title: "Twitter Name", subTitle: "Password", date: formattedDate))
+        cells.append(.webInfo(title: "Ziroh", subTitle: "Password", date: formattedDate))
+        cells.append(.webInfo(title: "Google", subTitle: "Password", date: formattedDate))
+        cells.append(.webInfo(title: "Facebook", subTitle: "Password", date: formattedDate))
+        cells.append(.webInfo(title: "Instagram", subTitle: "Password", date: formattedDate))
+        cells.append(.webInfo(title: "Twitter", subTitle: "Password", date: formattedDate))
     }
     
     func getCellInfo(index: Int) -> CellTypes {

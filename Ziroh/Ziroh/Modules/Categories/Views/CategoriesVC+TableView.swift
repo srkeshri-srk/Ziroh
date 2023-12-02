@@ -23,18 +23,19 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
         case .divider:
             let cell: DividerTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.dividerCell, for: indexPath) as! DividerTableViewCell
             return cell
-        case .categories:
-            return UITableViewCell()
+        case .categories(let data):
+            let cell: CategoriesInfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.categoriesInfoCell, for: indexPath) as! CategoriesInfoTableViewCell
+            cell.configureData(data: data)
+            return cell
         case .webInfo(let title, let subTitle, let date):
             let cell: WebInfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.webInfoCell, for: indexPath) as! WebInfoTableViewCell
             cell.configureUI(title: title, subTitle: subTitle, date: date)
             cell.delegate = self
             return cell
-
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        return viewModel.getCellInfo(index: indexPath.row).cellHeight
     }
 }
