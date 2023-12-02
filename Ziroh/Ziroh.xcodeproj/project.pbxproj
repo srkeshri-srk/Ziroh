@@ -11,8 +11,13 @@
 		E10FA3772B1B4B5E00F3FAEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3762B1B4B5E00F3FAEC /* SceneDelegate.swift */; };
 		E10FA37E2B1B4B6000F3FAEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10FA37D2B1B4B6000F3FAEC /* Assets.xcassets */; };
 		E10FA3812B1B4B6000F3FAEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10FA37F2B1B4B6000F3FAEC /* LaunchScreen.storyboard */; };
-		E10FA3892B1B4BED00F3FAEC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3882B1B4BED00F3FAEC /* TabBarViewController.swift */; };
-		E10FA38B2B1B4BF600F3FAEC /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10FA38A2B1B4BF600F3FAEC /* TabBar.storyboard */; };
+		E10FA3912B1B4D0000F3FAEC /* PasswordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3902B1B4D0000F3FAEC /* PasswordsViewController.swift */; };
+		E10FA3932B1B4D2D00F3FAEC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3922B1B4D2D00F3FAEC /* SettingsViewController.swift */; };
+		E10FA3952B1B4D4000F3FAEC /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3942B1B4D4000F3FAEC /* CategoriesViewController.swift */; };
+		E10FA3972B1B4D6000F3FAEC /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3962B1B4D6000F3FAEC /* PhotosViewController.swift */; };
+		E10FA39D2B1B4DF400F3FAEC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA39C2B1B4DF400F3FAEC /* BaseViewController.swift */; };
+		E10FA3A12B1B4FA200F3FAEC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3A02B1B4FA200F3FAEC /* TabBarViewController.swift */; };
+		E10FA3A32B1B4FB200F3FAEC /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10FA3A22B1B4FB200F3FAEC /* TabBar.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +27,13 @@
 		E10FA37D2B1B4B6000F3FAEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E10FA3802B1B4B6000F3FAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E10FA3822B1B4B6000F3FAEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E10FA3882B1B4BED00F3FAEC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		E10FA38A2B1B4BF600F3FAEC /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		E10FA3902B1B4D0000F3FAEC /* PasswordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsViewController.swift; sourceTree = "<group>"; };
+		E10FA3922B1B4D2D00F3FAEC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E10FA3942B1B4D4000F3FAEC /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		E10FA3962B1B4D6000F3FAEC /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		E10FA39C2B1B4DF400F3FAEC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E10FA3A02B1B4FA200F3FAEC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		E10FA3A22B1B4FB200F3FAEC /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 			children = (
 				E10FA38E2B1B4C1A00F3FAEC /* App Lifecycle */,
 				E10FA38F2B1B4C2800F3FAEC /* Modules */,
+				E10FA3A42B1B527800F3FAEC /* Commans */,
 				E10FA38D2B1B4C0F00F3FAEC /* Resources */,
 				E10FA3822B1B4B6000F3FAEC /* Info.plist */,
 			);
@@ -67,8 +78,8 @@
 		E10FA38C2B1B4C0400F3FAEC /* Tab Bar */ = {
 			isa = PBXGroup;
 			children = (
-				E10FA3882B1B4BED00F3FAEC /* TabBarViewController.swift */,
-				E10FA38A2B1B4BF600F3FAEC /* TabBar.storyboard */,
+				E10FA3A02B1B4FA200F3FAEC /* TabBarViewController.swift */,
+				E10FA3A22B1B4FB200F3FAEC /* TabBar.storyboard */,
 			);
 			path = "Tab Bar";
 			sourceTree = "<group>";
@@ -95,8 +106,52 @@
 			isa = PBXGroup;
 			children = (
 				E10FA38C2B1B4C0400F3FAEC /* Tab Bar */,
+				E10FA3982B1B4D6600F3FAEC /* Passwords */,
+				E10FA39A2B1B4D8300F3FAEC /* Categories */,
+				E10FA39B2B1B4D8800F3FAEC /* Photos */,
+				E10FA3992B1B4D7100F3FAEC /* Settings */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		E10FA3982B1B4D6600F3FAEC /* Passwords */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA3902B1B4D0000F3FAEC /* PasswordsViewController.swift */,
+			);
+			path = Passwords;
+			sourceTree = "<group>";
+		};
+		E10FA3992B1B4D7100F3FAEC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA3922B1B4D2D00F3FAEC /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E10FA39A2B1B4D8300F3FAEC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA3942B1B4D4000F3FAEC /* CategoriesViewController.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		E10FA39B2B1B4D8800F3FAEC /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA3962B1B4D6000F3FAEC /* PhotosViewController.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		E10FA3A42B1B527800F3FAEC /* Commans */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA39C2B1B4DF400F3FAEC /* BaseViewController.swift */,
+			);
+			path = Commans;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,7 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10FA3812B1B4B6000F3FAEC /* LaunchScreen.storyboard in Resources */,
-				E10FA38B2B1B4BF600F3FAEC /* TabBar.storyboard in Resources */,
+				E10FA3A32B1B4FB200F3FAEC /* TabBar.storyboard in Resources */,
 				E10FA37E2B1B4B6000F3FAEC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,8 +225,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10FA3A12B1B4FA200F3FAEC /* TabBarViewController.swift in Sources */,
 				E10FA3752B1B4B5E00F3FAEC /* AppDelegate.swift in Sources */,
-				E10FA3892B1B4BED00F3FAEC /* TabBarViewController.swift in Sources */,
+				E10FA3912B1B4D0000F3FAEC /* PasswordsViewController.swift in Sources */,
+				E10FA3952B1B4D4000F3FAEC /* CategoriesViewController.swift in Sources */,
+				E10FA3972B1B4D6000F3FAEC /* PhotosViewController.swift in Sources */,
+				E10FA39D2B1B4DF400F3FAEC /* BaseViewController.swift in Sources */,
+				E10FA3932B1B4D2D00F3FAEC /* SettingsViewController.swift in Sources */,
 				E10FA3772B1B4B5E00F3FAEC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
