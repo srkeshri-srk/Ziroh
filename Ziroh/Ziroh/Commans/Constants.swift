@@ -23,6 +23,11 @@ struct Constants {
         static let title = "Categories"
         static let navigationTitle = "Search"
         static let icon = "text.justify.left"
+        
+        struct TableView {
+            static let headerCell = "HeaderTableViewCell"
+            static let dividerCell = "DividerTableViewCell"
+        }
     }
     
     struct Photos {

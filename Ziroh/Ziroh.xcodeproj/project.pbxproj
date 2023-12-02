@@ -22,6 +22,10 @@
 		E10FA3AA2B1B8FA400F3FAEC /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3A92B1B8FA400F3FAEC /* PhotoCollectionViewCell.swift */; };
 		E10FA3AC2B1B902100F3FAEC /* photoCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3AB2B1B902100F3FAEC /* photoCollectionViewFlowLayout.swift */; };
 		E10FA3AF2B1B9BE600F3FAEC /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10FA3AE2B1B9BE600F3FAEC /* Color.xcassets */; };
+		E10FA3B42B1BA3D200F3FAEC /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3B22B1BA3D200F3FAEC /* HeaderTableViewCell.swift */; };
+		E10FA3B52B1BA3D200F3FAEC /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10FA3B32B1BA3D200F3FAEC /* HeaderTableViewCell.xib */; };
+		E10FA3BB2B1BA72100F3FAEC /* DividerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3B92B1BA72100F3FAEC /* DividerTableViewCell.swift */; };
+		E10FA3BC2B1BA72100F3FAEC /* DividerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10FA3BA2B1BA72100F3FAEC /* DividerTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		E10FA3A92B1B8FA400F3FAEC /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E10FA3AB2B1B902100F3FAEC /* photoCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		E10FA3AE2B1B9BE600F3FAEC /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		E10FA3B22B1BA3D200F3FAEC /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		E10FA3B32B1BA3D200F3FAEC /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		E10FA3B92B1BA72100F3FAEC /* DividerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerTableViewCell.swift; sourceTree = "<group>"; };
+		E10FA3BA2B1BA72100F3FAEC /* DividerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DividerTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +150,7 @@
 		E10FA39A2B1B4D8300F3FAEC /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				E10FA3942B1B4D4000F3FAEC /* CategoriesViewController.swift */,
+				E10FA3B12B1BA3AA00F3FAEC /* Views */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -180,6 +188,26 @@
 				E10FA3AD2B1B903800F3FAEC /* Collection Cell */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E10FA3B12B1BA3AA00F3FAEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA3942B1B4D4000F3FAEC /* CategoriesViewController.swift */,
+				E10FA3B62B1BA3D700F3FAEC /* Table Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E10FA3B62B1BA3D700F3FAEC /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA3B22B1BA3D200F3FAEC /* HeaderTableViewCell.swift */,
+				E10FA3B32B1BA3D200F3FAEC /* HeaderTableViewCell.xib */,
+				E10FA3B92B1BA72100F3FAEC /* DividerTableViewCell.swift */,
+				E10FA3BA2B1BA72100F3FAEC /* DividerTableViewCell.xib */,
+			);
+			path = "Table Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +271,8 @@
 				E10FA3812B1B4B6000F3FAEC /* LaunchScreen.storyboard in Resources */,
 				E10FA3AF2B1B9BE600F3FAEC /* Color.xcassets in Resources */,
 				E10FA3A32B1B4FB200F3FAEC /* TabBar.storyboard in Resources */,
+				E10FA3BC2B1BA72100F3FAEC /* DividerTableViewCell.xib in Resources */,
+				E10FA3B52B1BA3D200F3FAEC /* HeaderTableViewCell.xib in Resources */,
 				E10FA37E2B1B4B6000F3FAEC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,10 +288,12 @@
 				E10FA3752B1B4B5E00F3FAEC /* AppDelegate.swift in Sources */,
 				E10FA3912B1B4D0000F3FAEC /* PasswordsViewController.swift in Sources */,
 				E10FA3952B1B4D4000F3FAEC /* CategoriesViewController.swift in Sources */,
+				E10FA3B42B1BA3D200F3FAEC /* HeaderTableViewCell.swift in Sources */,
 				E10FA3972B1B4D6000F3FAEC /* PhotosViewController.swift in Sources */,
 				E10FA39D2B1B4DF400F3FAEC /* BaseViewController.swift in Sources */,
 				E10FA3932B1B4D2D00F3FAEC /* SettingsViewController.swift in Sources */,
 				E10FA3772B1B4B5E00F3FAEC /* SceneDelegate.swift in Sources */,
+				E10FA3BB2B1BA72100F3FAEC /* DividerTableViewCell.swift in Sources */,
 				E10FA3AC2B1B902100F3FAEC /* photoCollectionViewFlowLayout.swift in Sources */,
 				E10FA3AA2B1B8FA400F3FAEC /* PhotoCollectionViewCell.swift in Sources */,
 				E10FA3A62B1B7CCE00F3FAEC /* Constants.swift in Sources */,

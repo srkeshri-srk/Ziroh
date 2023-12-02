@@ -22,8 +22,9 @@ class CategoriesViewController: BaseViewController {
         let tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .black
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -45,6 +46,7 @@ class CategoriesViewController: BaseViewController {
         
         setupUI()
         setViewConstrains()
+        registerTableView()
     }
     
     override func viewWillLayoutSubviews() {
@@ -56,6 +58,11 @@ class CategoriesViewController: BaseViewController {
     private func setupUI() {
         setNavBar(title: Constants.Categories.navigationTitle, prefersLargeTitles: true)
         addButton.layer.cornerRadius = addButton.bounds.size.height / 2
+    }
+    
+    private func registerTableView() {
+        tableView.register(UINib(nibName: Constants.Categories.TableView.headerCell, bundle: nil), forCellReuseIdentifier: Constants.Categories.TableView.headerCell)
+        tableView.register(UINib(nibName: Constants.Categories.TableView.dividerCell, bundle: nil), forCellReuseIdentifier: Constants.Categories.TableView.dividerCell)
     }
     
     private func setViewConstrains() {
@@ -101,6 +108,19 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if indexPath.row == 0 {
+            let cell: HeaderTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.headerCell, for: indexPath) as! HeaderTableViewCell
+            if indexPath.row % 2 == 0 {
+                cell.configureUI(title: "Custom", isButtonAvailable: true)
+            }
+            return cell
+        } else {
+            let cell: DividerTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.dividerCell, for: indexPath) as! DividerTableViewCell
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
