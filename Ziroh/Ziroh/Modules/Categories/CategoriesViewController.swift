@@ -9,6 +9,15 @@ import UIKit
 
 class CategoriesViewController: BaseViewController {
     
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.placeholder = "Enter your request"
+        searchBar.delegate = self
+        searchBar.barTintColor = .black
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        return searchBar
+    }()
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
@@ -50,11 +59,17 @@ class CategoriesViewController: BaseViewController {
     }
     
     private func setViewConstrains() {
+        view.addSubview(searchBar)
         view.addSubview(tableView)
         view.addSubview(addButton)
         
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 0),
+            searchBar.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            searchBar.heightAnchor.constraint(equalToConstant: 55),
+            
+            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 0),
             tableView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 0),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
@@ -68,7 +83,18 @@ class CategoriesViewController: BaseViewController {
     
 }
 
+//MARK: - Search Bar
+extension CategoriesViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let searchText = searchBar.text {
+            print("Search for: \(searchText)")
+        }
+        
+        searchBar.resignFirstResponder()
+    }
+}
 
+//MARK: - Collection View
 extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
@@ -78,4 +104,3 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
         return UITableViewCell()
     }
 }
-
