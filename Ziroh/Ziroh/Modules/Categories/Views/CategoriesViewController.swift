@@ -35,12 +35,14 @@ class CategoriesViewController: BaseViewController {
         let button = UIButton()
         button.setTitle("Add", for: .normal)
         button.setImage(UIImage(systemName: "plus"), for: .normal)
-        button.backgroundColor = .gray
+        button.backgroundColor = .fadeGrey15
         button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
+    
+    var viewModel: CategoriesProtocol = CategoriesViewModel.builder()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -116,33 +118,5 @@ extension CategoriesViewController: WebInfoProtocol {
         let action = UIAlertAction(title: "Done", style: .cancel)
         alert.addAction(action)
         self.present(alert, animated: true)
-    }
-}
-
-//MARK: - Collection View
-extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell: HeaderTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.headerCell, for: indexPath) as! HeaderTableViewCell
-            if indexPath.row % 2 == 0 {
-                cell.configureUI(title: "Custom", isButtonAvailable: true)
-            }
-            return cell
-        } else if indexPath.row == 1 {
-            let cell: DividerTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.dividerCell, for: indexPath) as! DividerTableViewCell
-            return cell
-        } else {
-            let cell: WebInfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.webInfoCell, for: indexPath) as! WebInfoTableViewCell
-            cell.delegate = self
-            return cell
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
     }
 }

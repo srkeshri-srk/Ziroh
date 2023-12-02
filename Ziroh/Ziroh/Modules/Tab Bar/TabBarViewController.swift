@@ -8,6 +8,13 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
+    lazy var dividerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .gray
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     var controllers: [UIViewController] = [] {
         didSet {
             viewControllers = controllers
@@ -19,6 +26,7 @@ class TabBarViewController: UITabBarController {
         
         setupTabBar()
         setupUI()
+        setupConstrains()
     }
     
     private func setupTabBar() {
@@ -47,5 +55,16 @@ class TabBarViewController: UITabBarController {
         UITabBar.appearance().unselectedItemTintColor = .gray
         
         self.selectedIndex = 1
+    }
+    
+    private func setupConstrains() {
+        view.addSubview(dividerView)
+        
+        NSLayoutConstraint.activate([
+            dividerView.topAnchor.constraint(equalTo: tabBar.topAnchor),
+            dividerView.leadingAnchor.constraint(equalTo: tabBar.leadingAnchor),
+            dividerView.trailingAnchor.constraint(equalTo: tabBar.trailingAnchor),
+            dividerView.heightAnchor.constraint(equalToConstant: 1.0)
+        ])
     }
 }

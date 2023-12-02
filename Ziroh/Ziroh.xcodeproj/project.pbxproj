@@ -28,6 +28,9 @@
 		E10FA3BC2B1BA72100F3FAEC /* DividerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10FA3BA2B1BA72100F3FAEC /* DividerTableViewCell.xib */; };
 		E10FA3BF2B1BA8EB00F3FAEC /* WebInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3BD2B1BA8EB00F3FAEC /* WebInfoTableViewCell.swift */; };
 		E10FA3C02B1BA8EB00F3FAEC /* WebInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10FA3BE2B1BA8EB00F3FAEC /* WebInfoTableViewCell.xib */; };
+		E10FA3C22B1BAE2700F3FAEC /* CategoriesVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3C12B1BAE2700F3FAEC /* CategoriesVC+TableView.swift */; };
+		E10FA3C42B1BAE4C00F3FAEC /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3C32B1BAE4C00F3FAEC /* CategoriesViewModel.swift */; };
+		E10FA3C62B1BAE5900F3FAEC /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3C52B1BAE5900F3FAEC /* CategoriesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		E10FA3BA2B1BA72100F3FAEC /* DividerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DividerTableViewCell.xib; sourceTree = "<group>"; };
 		E10FA3BD2B1BA8EB00F3FAEC /* WebInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebInfoTableViewCell.swift; sourceTree = "<group>"; };
 		E10FA3BE2B1BA8EB00F3FAEC /* WebInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebInfoTableViewCell.xib; sourceTree = "<group>"; };
+		E10FA3C12B1BAE2700F3FAEC /* CategoriesVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesVC+TableView.swift"; sourceTree = "<group>"; };
+		E10FA3C32B1BAE4C00F3FAEC /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		E10FA3C52B1BAE5900F3FAEC /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,8 @@
 		E10FA39A2B1B4D8300F3FAEC /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				E10FA3C82B1BB45D00F3FAEC /* Model */,
+				E10FA3C72B1BB45500F3FAEC /* ViewModel */,
 				E10FA3B12B1BA3AA00F3FAEC /* Views */,
 			);
 			path = Categories;
@@ -198,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				E10FA3942B1B4D4000F3FAEC /* CategoriesViewController.swift */,
+				E10FA3C12B1BAE2700F3FAEC /* CategoriesVC+TableView.swift */,
 				E10FA3B62B1BA3D700F3FAEC /* Table Cells */,
 			);
 			path = Views;
@@ -214,6 +223,22 @@
 				E10FA3BE2B1BA8EB00F3FAEC /* WebInfoTableViewCell.xib */,
 			);
 			path = "Table Cells";
+			sourceTree = "<group>";
+		};
+		E10FA3C72B1BB45500F3FAEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA3C32B1BAE4C00F3FAEC /* CategoriesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E10FA3C82B1BB45D00F3FAEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA3C52B1BAE5900F3FAEC /* CategoriesModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,12 +322,15 @@
 				E10FA3952B1B4D4000F3FAEC /* CategoriesViewController.swift in Sources */,
 				E10FA3B42B1BA3D200F3FAEC /* HeaderTableViewCell.swift in Sources */,
 				E10FA3972B1B4D6000F3FAEC /* PhotosViewController.swift in Sources */,
+				E10FA3C42B1BAE4C00F3FAEC /* CategoriesViewModel.swift in Sources */,
 				E10FA39D2B1B4DF400F3FAEC /* BaseViewController.swift in Sources */,
 				E10FA3932B1B4D2D00F3FAEC /* SettingsViewController.swift in Sources */,
 				E10FA3772B1B4B5E00F3FAEC /* SceneDelegate.swift in Sources */,
 				E10FA3BB2B1BA72100F3FAEC /* DividerTableViewCell.swift in Sources */,
 				E10FA3AC2B1B902100F3FAEC /* photoCollectionViewFlowLayout.swift in Sources */,
 				E10FA3AA2B1B8FA400F3FAEC /* PhotoCollectionViewCell.swift in Sources */,
+				E10FA3C22B1BAE2700F3FAEC /* CategoriesVC+TableView.swift in Sources */,
+				E10FA3C62B1BAE5900F3FAEC /* CategoriesModel.swift in Sources */,
 				E10FA3BF2B1BA8EB00F3FAEC /* WebInfoTableViewCell.swift in Sources */,
 				E10FA3A62B1B7CCE00F3FAEC /* Constants.swift in Sources */,
 			);

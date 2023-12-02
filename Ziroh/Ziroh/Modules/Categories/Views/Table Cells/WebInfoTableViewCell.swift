@@ -22,6 +22,14 @@ class WebInfoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        setupUI()
+    }
+    
+    private func setupUI() {
+        dateLabel.textColor = .fadeGrey50
+        titleLabel.textColor = .fadeGrey
+        subTitleLabel.textColor = .fadeGrey50
     }
     
     func configureUI(title: String, subTitle: String, date: String) {
