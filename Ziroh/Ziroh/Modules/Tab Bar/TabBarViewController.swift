@@ -45,5 +45,7 @@ class TabBarViewController: UITabBarController {
         UITabBar.appearance().tintColor = .white
         UITabBar.appearance().barTintColor = .black
         UITabBar.appearance().unselectedItemTintColor = .gray
+        
+        self.selectedIndex = 1
     }
 }

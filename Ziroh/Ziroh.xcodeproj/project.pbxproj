@@ -21,6 +21,7 @@
 		E10FA3A62B1B7CCE00F3FAEC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3A52B1B7CCE00F3FAEC /* Constants.swift */; };
 		E10FA3AA2B1B8FA400F3FAEC /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3A92B1B8FA400F3FAEC /* PhotoCollectionViewCell.swift */; };
 		E10FA3AC2B1B902100F3FAEC /* photoCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3AB2B1B902100F3FAEC /* photoCollectionViewFlowLayout.swift */; };
+		E10FA3AF2B1B9BE600F3FAEC /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10FA3AE2B1B9BE600F3FAEC /* Color.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E10FA3A52B1B7CCE00F3FAEC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E10FA3A92B1B8FA400F3FAEC /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E10FA3AB2B1B902100F3FAEC /* photoCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		E10FA3AE2B1B9BE600F3FAEC /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				E10FA37D2B1B4B6000F3FAEC /* Assets.xcassets */,
+				E10FA3AE2B1B9BE600F3FAEC /* Color.xcassets */,
 				E10FA37F2B1B4B6000F3FAEC /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10FA3812B1B4B6000F3FAEC /* LaunchScreen.storyboard in Resources */,
+				E10FA3AF2B1B9BE600F3FAEC /* Color.xcassets in Resources */,
 				E10FA3A32B1B4FB200F3FAEC /* TabBar.storyboard in Resources */,
 				E10FA37E2B1B4B6000F3FAEC /* Assets.xcassets in Resources */,
 			);

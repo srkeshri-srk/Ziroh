@@ -53,7 +53,10 @@ class PhotosViewController: BaseViewController {
     }
     
     @objc func rightNavigationButtonTapAction() {
-        print("rightNavigationButtonAction")
+        let alert = UIAlertController(title: "Hey!!", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Done", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
     
 }
