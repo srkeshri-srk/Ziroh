@@ -50,7 +50,7 @@ class TabBarViewController: UITabBarController {
     
     private func setupUI() {
         UITabBar.appearance().backgroundColor = .black
-        UITabBar.appearance().tintColor = .white
+        UITabBar.appearance().tintColor = .cyan
         UITabBar.appearance().barTintColor = .black
         UITabBar.appearance().unselectedItemTintColor = .gray
         
