@@ -12,7 +12,16 @@ class PhotosViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setNavBar(title: "Photos")
+        setupUI()
+        setViewConstrains()
+    }
+    
+    private func setupUI() {
+        setNavBar(title: Constants.Photos.title)
+    }
+    
+    private func setViewConstrains() {
+        
     }
     
 }

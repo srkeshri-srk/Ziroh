@@ -33,11 +33,8 @@ class PasswordsViewController: BaseViewController {
 //MARK: - Private Methods
 private extension PasswordsViewController {
     func setupUI() {
-        setNavBar(title: "Passwords")
-        label.text = """
-                    U N D E R
-                    C O N S T R U C T I O N
-                    """
+        setNavBar(title: Constants.Passwords.title)
+        label.text = Constants.Passwords.detailText
     }
     
     func setViewConstrains() {

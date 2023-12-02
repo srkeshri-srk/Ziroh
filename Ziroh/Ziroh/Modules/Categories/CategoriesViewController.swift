@@ -12,7 +12,17 @@ class CategoriesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setNavBar(title: "Categories")    
+        setupUI()
+        setViewConstrains()
+    }
+    
+    private func setupUI() {
+        setNavBar(title: Constants.Categories.title)
+    }
+    
+    private func setViewConstrains() {
+        
     }
     
 }
+

@@ -33,11 +33,8 @@ class SettingsViewController: BaseViewController {
 //MARK: - Private Methods
 private extension SettingsViewController {
     func setupUI() {
-        setNavBar(title: "Settings")
-        label.text = """
-                    U N D E R
-                    C O N S T R U C T I O N
-                    """
+        setNavBar(title: Constants.Settings.title)
+        label.text = Constants.Settings.detailText
     }
     
     func setViewConstrains() {

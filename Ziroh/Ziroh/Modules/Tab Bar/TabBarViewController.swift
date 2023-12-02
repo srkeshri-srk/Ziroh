@@ -8,7 +8,6 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-    
     var controllers: [UIViewController] = [] {
         didSet {
             viewControllers = controllers
@@ -28,10 +27,10 @@ class TabBarViewController: UITabBarController {
         let photosVC = PhotosViewController()
         let settingsVC = SettingsViewController()
 
-        passwordsVC.tabBarItem = UITabBarItem(title: "Passwords", image: UIImage(systemName: "square.stack.3d.up"), tag: 0)
-        categoriesVC.tabBarItem = UITabBarItem(title: "Categories", image: UIImage(systemName: "text.justify.left"), tag: 1)
-        photosVC.tabBarItem = UITabBarItem(title: "Photos", image: UIImage(systemName: "arrow.down.to.line"), tag: 2)
-        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gearshape"), tag: 3)
+        passwordsVC.tabBarItem = UITabBarItem(title: Constants.Passwords.title, image: UIImage(systemName: Constants.Passwords.icon), tag: 100)
+        categoriesVC.tabBarItem = UITabBarItem(title: Constants.Categories.title, image: UIImage(systemName: Constants.Categories.icon), tag: 101)
+        photosVC.tabBarItem = UITabBarItem(title: Constants.Photos.title, image: UIImage(systemName:Constants.Photos.icon), tag: 102)
+        settingsVC.tabBarItem = UITabBarItem(title: Constants.Settings.title, image: UIImage(systemName: Constants.Settings.icon), tag: 103)
         
         let passwordsNC = UINavigationController(rootViewController: passwordsVC)
         let categoriesNC = UINavigationController(rootViewController: categoriesVC)
