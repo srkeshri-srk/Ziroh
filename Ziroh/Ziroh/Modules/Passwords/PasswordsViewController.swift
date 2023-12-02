@@ -33,7 +33,7 @@ class PasswordsViewController: BaseViewController {
 //MARK: - Private Methods
 private extension PasswordsViewController {
     func setupUI() {
-        setNavBar(title: Constants.Passwords.title)
+        setNavBar(title: Constants.Passwords.navigationTitle)
         label.text = Constants.Passwords.detailText
     }
     

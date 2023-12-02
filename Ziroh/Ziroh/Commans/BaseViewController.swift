@@ -20,7 +20,7 @@ class BaseViewController: UIViewController {
     }
     
     
-    func setNavBar(title value: String) {
+    func setNavBar(title value: String, prefersLargeTitles: Bool = false) {
         title = value
         let standardAppearance = UINavigationBarAppearance()
         standardAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -30,6 +30,7 @@ class BaseViewController: UIViewController {
         standardAppearance.configureWithOpaqueBackground()
         standardAppearance.backgroundColor = .black
 
+        self.navigationController?.navigationBar.prefersLargeTitles = prefersLargeTitles
         self.navigationController?.navigationBar.standardAppearance = standardAppearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = standardAppearance
     }

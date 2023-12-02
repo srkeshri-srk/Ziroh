@@ -17,7 +17,7 @@ class PhotosViewController: BaseViewController {
     }
     
     private func setupUI() {
-        setNavBar(title: Constants.Photos.title)
+        setNavBar(title: Constants.Photos.navigationTitle, prefersLargeTitles: true)
     }
     
     private func setViewConstrains() {

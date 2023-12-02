@@ -33,7 +33,7 @@ class SettingsViewController: BaseViewController {
 //MARK: - Private Methods
 private extension SettingsViewController {
     func setupUI() {
-        setNavBar(title: Constants.Settings.title)
+        setNavBar(title: Constants.Settings.navigationTitle)
         label.text = Constants.Settings.detailText
     }
     

@@ -11,6 +11,7 @@ import Foundation
 struct Constants {
     struct Passwords {
         static let title = "Passwords"
+        static let navigationTitle = "Passwords"
         static let icon = "square.stack.3d.up"
         static let detailText = """
                     U N D E R
@@ -20,16 +21,19 @@ struct Constants {
     
     struct Categories {
         static let title = "Categories"
+        static let navigationTitle = "Search"
         static let icon = "text.justify.left"
     }
     
     struct Photos {
         static let title = "Photos"
+        static let navigationTitle = "All"
         static let icon = "arrow.down.to.line"
     }
     
     struct Settings {
         static let title = "Settings"
+        static let navigationTitle = "Settings"
         static let icon = "gearshape"
         static let detailText = """
                     U N D E R
