@@ -29,6 +29,8 @@ struct Constants {
         static let title = "Photos"
         static let navigationTitle = "All"
         static let icon = "arrow.down.to.line"
+        static let rightItemIcon = "arrow.right"
+        static let PhotoCollectionViewCell = "PhotoCollectionViewCell"
     }
     
     struct Settings {
