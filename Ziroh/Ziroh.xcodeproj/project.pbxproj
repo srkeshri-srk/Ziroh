@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		E10FA3752B1B4B5E00F3FAEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3742B1B4B5E00F3FAEC /* AppDelegate.swift */; };
 		E10FA3772B1B4B5E00F3FAEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3762B1B4B5E00F3FAEC /* SceneDelegate.swift */; };
-		E10FA3792B1B4B5E00F3FAEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3782B1B4B5E00F3FAEC /* ViewController.swift */; };
-		E10FA37C2B1B4B5E00F3FAEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10FA37A2B1B4B5E00F3FAEC /* Main.storyboard */; };
 		E10FA37E2B1B4B6000F3FAEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10FA37D2B1B4B6000F3FAEC /* Assets.xcassets */; };
 		E10FA3812B1B4B6000F3FAEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10FA37F2B1B4B6000F3FAEC /* LaunchScreen.storyboard */; };
+		E10FA3892B1B4BED00F3FAEC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3882B1B4BED00F3FAEC /* TabBarViewController.swift */; };
+		E10FA38B2B1B4BF600F3FAEC /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10FA38A2B1B4BF600F3FAEC /* TabBar.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E10FA3712B1B4B5E00F3FAEC /* Ziroh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ziroh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10FA3742B1B4B5E00F3FAEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E10FA3762B1B4B5E00F3FAEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E10FA3782B1B4B5E00F3FAEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E10FA37B2B1B4B5E00F3FAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E10FA37D2B1B4B6000F3FAEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E10FA3802B1B4B6000F3FAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E10FA3822B1B4B6000F3FAEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E10FA3882B1B4BED00F3FAEC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		E10FA38A2B1B4BF600F3FAEC /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,47 @@
 		E10FA3732B1B4B5E00F3FAEC /* Ziroh */ = {
 			isa = PBXGroup;
 			children = (
-				E10FA3742B1B4B5E00F3FAEC /* AppDelegate.swift */,
-				E10FA3762B1B4B5E00F3FAEC /* SceneDelegate.swift */,
-				E10FA3782B1B4B5E00F3FAEC /* ViewController.swift */,
-				E10FA37A2B1B4B5E00F3FAEC /* Main.storyboard */,
-				E10FA37D2B1B4B6000F3FAEC /* Assets.xcassets */,
-				E10FA37F2B1B4B6000F3FAEC /* LaunchScreen.storyboard */,
+				E10FA38E2B1B4C1A00F3FAEC /* App Lifecycle */,
+				E10FA38F2B1B4C2800F3FAEC /* Modules */,
+				E10FA38D2B1B4C0F00F3FAEC /* Resources */,
 				E10FA3822B1B4B6000F3FAEC /* Info.plist */,
 			);
 			path = Ziroh;
+			sourceTree = "<group>";
+		};
+		E10FA38C2B1B4C0400F3FAEC /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA3882B1B4BED00F3FAEC /* TabBarViewController.swift */,
+				E10FA38A2B1B4BF600F3FAEC /* TabBar.storyboard */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		E10FA38D2B1B4C0F00F3FAEC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA37D2B1B4B6000F3FAEC /* Assets.xcassets */,
+				E10FA37F2B1B4B6000F3FAEC /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E10FA38E2B1B4C1A00F3FAEC /* App Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA3742B1B4B5E00F3FAEC /* AppDelegate.swift */,
+				E10FA3762B1B4B5E00F3FAEC /* SceneDelegate.swift */,
+			);
+			path = "App Lifecycle";
+			sourceTree = "<group>";
+		};
+		E10FA38F2B1B4C2800F3FAEC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA38C2B1B4C0400F3FAEC /* Tab Bar */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10FA3812B1B4B6000F3FAEC /* LaunchScreen.storyboard in Resources */,
+				E10FA38B2B1B4BF600F3FAEC /* TabBar.storyboard in Resources */,
 				E10FA37E2B1B4B6000F3FAEC /* Assets.xcassets in Resources */,
-				E10FA37C2B1B4B5E00F3FAEC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E10FA3792B1B4B5E00F3FAEC /* ViewController.swift in Sources */,
 				E10FA3752B1B4B5E00F3FAEC /* AppDelegate.swift in Sources */,
+				E10FA3892B1B4BED00F3FAEC /* TabBarViewController.swift in Sources */,
 				E10FA3772B1B4B5E00F3FAEC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +179,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E10FA37A2B1B4B5E00F3FAEC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E10FA37B2B1B4B5E00F3FAEC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E10FA37F2B1B4B6000F3FAEC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +320,7 @@
 				INFOPLIST_FILE = Ziroh/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,7 +347,7 @@
 				INFOPLIST_FILE = Ziroh/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
