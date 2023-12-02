@@ -150,8 +150,7 @@
 		E10FA39B2B1B4D8800F3FAEC /* Photos */ = {
 			isa = PBXGroup;
 			children = (
-				E10FA3962B1B4D6000F3FAEC /* PhotosViewController.swift */,
-				E10FA3AD2B1B903800F3FAEC /* Collection Cell */,
+				E10FA3B02B1BA29B00F3FAEC /* Views */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -172,6 +171,15 @@
 				E10FA3AB2B1B902100F3FAEC /* photoCollectionViewFlowLayout.swift */,
 			);
 			path = "Collection Cell";
+			sourceTree = "<group>";
+		};
+		E10FA3B02B1BA29B00F3FAEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA3962B1B4D6000F3FAEC /* PhotosViewController.swift */,
+				E10FA3AD2B1B903800F3FAEC /* Collection Cell */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
