@@ -60,6 +60,7 @@ class CategoriesViewController: BaseViewController {
     private func setupUI() {
         setNavBar(title: Constants.Categories.navigationTitle, prefersLargeTitles: true)
         addButton.layer.cornerRadius = addButton.bounds.size.height / 2
+        addButton.addTarget(self, action: #selector(self.addButtonTapAction), for: .touchUpInside)
     }
     
     private func registerTableView() {
@@ -92,7 +93,15 @@ class CategoriesViewController: BaseViewController {
         ])
     }
     
+    @objc func addButtonTapAction() {
+        let alert = UIAlertController(title: "Add Button", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Done", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
+    
 }
+
 
 //MARK: - Search Bar
 extension CategoriesViewController: UISearchBarDelegate {
@@ -105,6 +114,7 @@ extension CategoriesViewController: UISearchBarDelegate {
     }
 }
 
+
 //MARK: - WebInfo Protocol
 extension CategoriesViewController: WebInfoProtocol {
     func copy() {
@@ -116,6 +126,17 @@ extension CategoriesViewController: WebInfoProtocol {
     
     func action() {
         let alert = UIAlertController(title: "Web Action ", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Done", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
+}
+
+
+//MARK: - Header Protocol
+extension CategoriesViewController: HeaderProtocol {
+    func headerButtonTap() {
+        let alert = UIAlertController(title: "Header Button", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Done", style: .cancel)
         alert.addAction(action)
         self.present(alert, animated: true)

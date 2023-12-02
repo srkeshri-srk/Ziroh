@@ -19,6 +19,7 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
         case .header(let title, let isButtonAvailable):
             let cell: HeaderTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.headerCell, for: indexPath) as! HeaderTableViewCell
             cell.configureUI(title: title, isButtonAvailable: isButtonAvailable)
+            cell.delegte = self
             return cell
         case .divider:
             let cell: DividerTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.dividerCell, for: indexPath) as! DividerTableViewCell

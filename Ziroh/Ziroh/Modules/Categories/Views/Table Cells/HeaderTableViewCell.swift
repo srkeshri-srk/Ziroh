@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol HeaderProtocol: AnyObject {
+    func headerButtonTap()
+}
+
 class HeaderTableViewCell: UITableViewCell {
     
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var button: UIButton!
+    
+    weak var delegte: HeaderProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,4 +32,9 @@ class HeaderTableViewCell: UITableViewCell {
         self.title.text = title
         self.button.isHidden = !isButtonAvailable
     }
+    
+    @IBAction func buttonTapAction(_ sender: UIButton) {
+        delegte?.headerButtonTap()
+    }
+    
 }
