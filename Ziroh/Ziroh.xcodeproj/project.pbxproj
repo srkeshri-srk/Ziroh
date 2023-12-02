@@ -26,6 +26,8 @@
 		E10FA3B52B1BA3D200F3FAEC /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10FA3B32B1BA3D200F3FAEC /* HeaderTableViewCell.xib */; };
 		E10FA3BB2B1BA72100F3FAEC /* DividerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3B92B1BA72100F3FAEC /* DividerTableViewCell.swift */; };
 		E10FA3BC2B1BA72100F3FAEC /* DividerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10FA3BA2B1BA72100F3FAEC /* DividerTableViewCell.xib */; };
+		E10FA3BF2B1BA8EB00F3FAEC /* WebInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3BD2B1BA8EB00F3FAEC /* WebInfoTableViewCell.swift */; };
+		E10FA3C02B1BA8EB00F3FAEC /* WebInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10FA3BE2B1BA8EB00F3FAEC /* WebInfoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		E10FA3B32B1BA3D200F3FAEC /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		E10FA3B92B1BA72100F3FAEC /* DividerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerTableViewCell.swift; sourceTree = "<group>"; };
 		E10FA3BA2B1BA72100F3FAEC /* DividerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DividerTableViewCell.xib; sourceTree = "<group>"; };
+		E10FA3BD2B1BA8EB00F3FAEC /* WebInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebInfoTableViewCell.swift; sourceTree = "<group>"; };
+		E10FA3BE2B1BA8EB00F3FAEC /* WebInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebInfoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,8 @@
 				E10FA3B32B1BA3D200F3FAEC /* HeaderTableViewCell.xib */,
 				E10FA3B92B1BA72100F3FAEC /* DividerTableViewCell.swift */,
 				E10FA3BA2B1BA72100F3FAEC /* DividerTableViewCell.xib */,
+				E10FA3BD2B1BA8EB00F3FAEC /* WebInfoTableViewCell.swift */,
+				E10FA3BE2B1BA8EB00F3FAEC /* WebInfoTableViewCell.xib */,
 			);
 			path = "Table Cells";
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10FA3812B1B4B6000F3FAEC /* LaunchScreen.storyboard in Resources */,
+				E10FA3C02B1BA8EB00F3FAEC /* WebInfoTableViewCell.xib in Resources */,
 				E10FA3AF2B1B9BE600F3FAEC /* Color.xcassets in Resources */,
 				E10FA3A32B1B4FB200F3FAEC /* TabBar.storyboard in Resources */,
 				E10FA3BC2B1BA72100F3FAEC /* DividerTableViewCell.xib in Resources */,
@@ -296,6 +303,7 @@
 				E10FA3BB2B1BA72100F3FAEC /* DividerTableViewCell.swift in Sources */,
 				E10FA3AC2B1B902100F3FAEC /* photoCollectionViewFlowLayout.swift in Sources */,
 				E10FA3AA2B1B8FA400F3FAEC /* PhotoCollectionViewCell.swift in Sources */,
+				E10FA3BF2B1BA8EB00F3FAEC /* WebInfoTableViewCell.swift in Sources */,
 				E10FA3A62B1B7CCE00F3FAEC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -63,6 +63,8 @@ class CategoriesViewController: BaseViewController {
     private func registerTableView() {
         tableView.register(UINib(nibName: Constants.Categories.TableView.headerCell, bundle: nil), forCellReuseIdentifier: Constants.Categories.TableView.headerCell)
         tableView.register(UINib(nibName: Constants.Categories.TableView.dividerCell, bundle: nil), forCellReuseIdentifier: Constants.Categories.TableView.dividerCell)
+        tableView.register(UINib(nibName: Constants.Categories.TableView.webInfoCell, bundle: nil), forCellReuseIdentifier: Constants.Categories.TableView.webInfoCell)
+
     }
     
     private func setViewConstrains() {
@@ -101,6 +103,22 @@ extension CategoriesViewController: UISearchBarDelegate {
     }
 }
 
+extension CategoriesViewController: WebInfoProtocol {
+    func copy() {
+        let alert = UIAlertController(title: "Web Copy", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Done", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
+    
+    func action() {
+        let alert = UIAlertController(title: "Web Action ", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Done", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
+}
+
 //MARK: - Collection View
 extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -114,8 +132,12 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
                 cell.configureUI(title: "Custom", isButtonAvailable: true)
             }
             return cell
-        } else {
+        } else if indexPath.row == 1 {
             let cell: DividerTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.dividerCell, for: indexPath) as! DividerTableViewCell
+            return cell
+        } else {
+            let cell: WebInfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.webInfoCell, for: indexPath) as! WebInfoTableViewCell
+            cell.delegate = self
             return cell
         }
     }

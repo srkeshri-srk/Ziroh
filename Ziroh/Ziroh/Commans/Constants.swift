@@ -27,6 +27,7 @@ struct Constants {
         struct TableView {
             static let headerCell = "HeaderTableViewCell"
             static let dividerCell = "DividerTableViewCell"
+            static let webInfoCell = "WebInfoTableViewCell"
         }
     }
     
