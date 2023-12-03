@@ -21,6 +21,8 @@ class PhotosViewController: BaseViewController {
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
     }()
+    
+    var viewModel: PhotosProtocol = PhotosViewModel.builder()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,11 +65,12 @@ class PhotosViewController: BaseViewController {
 
 extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return viewModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: PhotoCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Photos.PhotoCollectionViewCell, for: indexPath) as! PhotoCollectionViewCell
+        cell.configureInfo(data: viewModel.getPhoto(of: indexPath.row))
         return cell
     }
 }

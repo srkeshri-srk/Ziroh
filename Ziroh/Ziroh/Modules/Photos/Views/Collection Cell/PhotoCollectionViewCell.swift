@@ -7,9 +7,10 @@
 
 import UIKit
 
+
 class PhotoCollectionViewCell: UICollectionViewCell {
     
-    lazy var imageView: UIImageView = {
+    lazy var artworkImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -33,19 +34,35 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupUI() {
-        self.backgroundColor = UIColor.blue
+        self.addBlurEffect(style: .systemChromeMaterialDark)
         self.layer.cornerRadius = 10.0
         self.layer.masksToBounds = true
     }
     
     private func setUpConstraints() {
-        addSubview(imageView)
+        addSubview(artworkImageView)
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            artworkImageView.topAnchor.constraint(equalTo: topAnchor),
+            artworkImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            artworkImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            artworkImageView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
+    }
+    
+    private func reset() {
+        artworkImageView.image = nil
+    }
+    
+    func configureInfo(data: Data?) {
+        reset()
+        guard let data = data, let image = UIImage(data: data) else {
+            artworkImageView.image = UIImage(named: "placeholder")
+            return
+        }
+        
+        DispatchQueue.main.async {
+            self.artworkImageView.image = image
+        }
     }
 }

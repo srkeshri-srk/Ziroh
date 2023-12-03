@@ -41,6 +41,8 @@
 		E10FA3DB2B1BC41300F3FAEC /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3D52B1BC41300F3FAEC /* APIRequest.swift */; };
 		E10FA3DC2B1BC41300F3FAEC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3D62B1BC41300F3FAEC /* NetworkError.swift */; };
 		E10FA3DD2B1BC41300F3FAEC /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3D72B1BC41300F3FAEC /* JSONParser.swift */; };
+		E10FA3E02B1BCAFA00F3FAEC /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3DF2B1BCAFA00F3FAEC /* PhotosViewModel.swift */; };
+		E10FA3E42B1BCC4B00F3FAEC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E10FA3E32B1BCC4B00F3FAEC /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,7 @@
 		E10FA3D52B1BC41300F3FAEC /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		E10FA3D62B1BC41300F3FAEC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		E10FA3D72B1BC41300F3FAEC /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		E10FA3DF2B1BCAFA00F3FAEC /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10FA3E42B1BCC4B00F3FAEC /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +195,7 @@
 		E10FA39B2B1B4D8800F3FAEC /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				E10FA3E12B1BCAFF00F3FAEC /* ViewModel */,
 				E10FA3B02B1BA29B00F3FAEC /* Views */,
 			);
 			path = Photos;
@@ -287,6 +292,14 @@
 			path = "Network Layer";
 			sourceTree = "<group>";
 		};
+		E10FA3E12B1BCAFF00F3FAEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E10FA3DF2B1BCAFA00F3FAEC /* PhotosViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -303,6 +316,9 @@
 			dependencies = (
 			);
 			name = Ziroh;
+			packageProductDependencies = (
+				E10FA3E32B1BCC4B00F3FAEC /* Kingfisher */,
+			);
 			productName = Ziroh;
 			productReference = E10FA3712B1B4B5E00F3FAEC /* Ziroh.app */;
 			productType = "com.apple.product-type.application";
@@ -331,6 +347,9 @@
 				Base,
 			);
 			mainGroup = E10FA3682B1B4B5E00F3FAEC;
+			packageReferences = (
+				E10FA3E22B1BCC4B00F3FAEC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = E10FA3722B1B4B5E00F3FAEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -369,6 +388,7 @@
 				E10FA3A12B1B4FA200F3FAEC /* TabBarViewController.swift in Sources */,
 				E10FA3752B1B4B5E00F3FAEC /* AppDelegate.swift in Sources */,
 				E10FA3912B1B4D0000F3FAEC /* PasswordsViewController.swift in Sources */,
+				E10FA3E02B1BCAFA00F3FAEC /* PhotosViewModel.swift in Sources */,
 				E10FA3952B1B4D4000F3FAEC /* CategoriesViewController.swift in Sources */,
 				E10FA3B42B1BA3D200F3FAEC /* HeaderTableViewCell.swift in Sources */,
 				E10FA3972B1B4D6000F3FAEC /* PhotosViewController.swift in Sources */,
@@ -532,13 +552,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QA6K73HN4W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Ziroh/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,13 +579,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QA6K73HN4W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Ziroh/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -601,6 +621,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E10FA3E22B1BCC4B00F3FAEC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E10FA3E32B1BCC4B00F3FAEC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E10FA3E22B1BCC4B00F3FAEC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E10FA3692B1B4B5E00F3FAEC /* Project object */;
 }
