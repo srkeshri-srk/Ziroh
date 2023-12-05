@@ -29,6 +29,8 @@ class PhotosViewController: BaseViewController {
 
         setupUI()
         setViewConstrains()
+        
+        viewModel.delegate = self
     }
     
     private func setupUI() {
@@ -72,5 +74,13 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
         let cell: PhotoCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Photos.PhotoCollectionViewCell, for: indexPath) as! PhotoCollectionViewCell
         cell.configureInfo(data: viewModel.getPhoto(of: indexPath.row))
         return cell
+    }
+}
+
+extension PhotosViewController: PhotoViewModelDelegate {
+    func photoUpdate(at index: Int) {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
 }
