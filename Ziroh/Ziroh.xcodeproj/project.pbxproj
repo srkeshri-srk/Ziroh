@@ -35,12 +35,6 @@
 		E10FA3CC2B1BB7AC00F3FAEC /* CategoriesInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10FA3CA2B1BB7AC00F3FAEC /* CategoriesInfoTableViewCell.xib */; };
 		E10FA3CF2B1BBB2800F3FAEC /* CategorieInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3CD2B1BBB2800F3FAEC /* CategorieInfoCollectionViewCell.swift */; };
 		E10FA3D02B1BBB2800F3FAEC /* CategorieInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10FA3CE2B1BBB2800F3FAEC /* CategorieInfoCollectionViewCell.xib */; };
-		E10FA3D82B1BC41300F3FAEC /* NetworkLayer+DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3D22B1BC41300F3FAEC /* NetworkLayer+DataTask.swift */; };
-		E10FA3D92B1BC41300F3FAEC /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3D32B1BC41300F3FAEC /* NetworkLayer.swift */; };
-		E10FA3DA2B1BC41300F3FAEC /* URLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3D42B1BC41300F3FAEC /* URLGenerator.swift */; };
-		E10FA3DB2B1BC41300F3FAEC /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3D52B1BC41300F3FAEC /* APIRequest.swift */; };
-		E10FA3DC2B1BC41300F3FAEC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3D62B1BC41300F3FAEC /* NetworkError.swift */; };
-		E10FA3DD2B1BC41300F3FAEC /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3D72B1BC41300F3FAEC /* JSONParser.swift */; };
 		E10FA3E02B1BCAFA00F3FAEC /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA3DF2B1BCAFA00F3FAEC /* PhotosViewModel.swift */; };
 		E10FA3E42B1BCC4B00F3FAEC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E10FA3E32B1BCC4B00F3FAEC /* Kingfisher */; };
 /* End PBXBuildFile section */
@@ -76,12 +70,6 @@
 		E10FA3CA2B1BB7AC00F3FAEC /* CategoriesInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesInfoTableViewCell.xib; sourceTree = "<group>"; };
 		E10FA3CD2B1BBB2800F3FAEC /* CategorieInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E10FA3CE2B1BBB2800F3FAEC /* CategorieInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorieInfoCollectionViewCell.xib; sourceTree = "<group>"; };
-		E10FA3D22B1BC41300F3FAEC /* NetworkLayer+DataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkLayer+DataTask.swift"; sourceTree = "<group>"; };
-		E10FA3D32B1BC41300F3FAEC /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
-		E10FA3D42B1BC41300F3FAEC /* URLGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLGenerator.swift; sourceTree = "<group>"; };
-		E10FA3D52B1BC41300F3FAEC /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		E10FA3D62B1BC41300F3FAEC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		E10FA3D72B1BC41300F3FAEC /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		E10FA3DF2B1BCAFA00F3FAEC /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				E10FA38E2B1B4C1A00F3FAEC /* App Lifecycle */,
-				E10FA3DE2B1BC41800F3FAEC /* Network Layer */,
 				E10FA38F2B1B4C2800F3FAEC /* Modules */,
 				E10FA3A42B1B527800F3FAEC /* Commans */,
 				E10FA38D2B1B4C0F00F3FAEC /* Resources */,
@@ -279,19 +266,6 @@
 			path = "Collection Cells";
 			sourceTree = "<group>";
 		};
-		E10FA3DE2B1BC41800F3FAEC /* Network Layer */ = {
-			isa = PBXGroup;
-			children = (
-				E10FA3D22B1BC41300F3FAEC /* NetworkLayer+DataTask.swift */,
-				E10FA3D32B1BC41300F3FAEC /* NetworkLayer.swift */,
-				E10FA3D42B1BC41300F3FAEC /* URLGenerator.swift */,
-				E10FA3D52B1BC41300F3FAEC /* APIRequest.swift */,
-				E10FA3D62B1BC41300F3FAEC /* NetworkError.swift */,
-				E10FA3D72B1BC41300F3FAEC /* JSONParser.swift */,
-			);
-			path = "Network Layer";
-			sourceTree = "<group>";
-		};
 		E10FA3E12B1BCAFF00F3FAEC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,8 +357,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E10FA3D92B1BC41300F3FAEC /* NetworkLayer.swift in Sources */,
-				E10FA3DD2B1BC41300F3FAEC /* JSONParser.swift in Sources */,
 				E10FA3A12B1B4FA200F3FAEC /* TabBarViewController.swift in Sources */,
 				E10FA3752B1B4B5E00F3FAEC /* AppDelegate.swift in Sources */,
 				E10FA3912B1B4D0000F3FAEC /* PasswordsViewController.swift in Sources */,
@@ -394,9 +366,7 @@
 				E10FA3972B1B4D6000F3FAEC /* PhotosViewController.swift in Sources */,
 				E10FA3C42B1BAE4C00F3FAEC /* CategoriesViewModel.swift in Sources */,
 				E10FA39D2B1B4DF400F3FAEC /* BaseViewController.swift in Sources */,
-				E10FA3DC2B1BC41300F3FAEC /* NetworkError.swift in Sources */,
 				E10FA3932B1B4D2D00F3FAEC /* SettingsViewController.swift in Sources */,
-				E10FA3DB2B1BC41300F3FAEC /* APIRequest.swift in Sources */,
 				E10FA3772B1B4B5E00F3FAEC /* SceneDelegate.swift in Sources */,
 				E10FA3BB2B1BA72100F3FAEC /* DividerTableViewCell.swift in Sources */,
 				E10FA3CB2B1BB7AC00F3FAEC /* CategoriesInfoTableViewCell.swift in Sources */,
@@ -405,8 +375,6 @@
 				E10FA3CF2B1BBB2800F3FAEC /* CategorieInfoCollectionViewCell.swift in Sources */,
 				E10FA3C22B1BAE2700F3FAEC /* CategoriesVC+TableView.swift in Sources */,
 				E10FA3C62B1BAE5900F3FAEC /* CategoriesModel.swift in Sources */,
-				E10FA3D82B1BC41300F3FAEC /* NetworkLayer+DataTask.swift in Sources */,
-				E10FA3DA2B1BC41300F3FAEC /* URLGenerator.swift in Sources */,
 				E10FA3BF2B1BA8EB00F3FAEC /* WebInfoTableViewCell.swift in Sources */,
 				E10FA3A62B1B7CCE00F3FAEC /* Constants.swift in Sources */,
 			);
