@@ -14,7 +14,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.image = UIImage(named: "placeholder")
+        imageView.image = UIImage(named: "blackPlaceHolder")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -57,7 +57,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     func configureInfo(data: Data?) {
         reset()
         guard let data = data, let image = UIImage(data: data) else {
-            artworkImageView.image = UIImage(named: "placeholder")
+            artworkImageView.image = UIImage(named: "blackPlaceHolder")
             return
         }
         

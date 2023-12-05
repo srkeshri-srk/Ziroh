@@ -67,7 +67,7 @@ class PhotosViewController: BaseViewController {
 
 extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.count
+        return viewModel.noOfPhotos
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -75,10 +75,25 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
         cell.configureInfo(data: viewModel.getPhoto(of: indexPath.row))
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item >= viewModel.count - 4 && !viewModel.ispagginating {
+            viewModel.noOfPhotos += viewModel.noOfPhotos
+        }
+    }
+    
 }
 
 extension PhotosViewController: PhotoViewModelDelegate {
     func photoUpdate(at index: Int) {
+        DispatchQueue.main.async {
+            if let cell = self.collectionView.cellForItem(at: IndexPath(row: index, section: 0)) as? PhotoCollectionViewCell {
+                cell.configureInfo(data: self.viewModel.getPhoto(of: index))
+            }
+        }
+    }
+    
+    func updateUI() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }

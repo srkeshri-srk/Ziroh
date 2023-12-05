@@ -9,6 +9,8 @@ import UIKit
 
 protocol PhotosProtocol: AnyObject {
     var count: Int { get }
+    var noOfPhotos: Int { get set }
+    var ispagginating: Bool { get set }
     var delegate: PhotoViewModelDelegate? { get set }
 
     static func builder() -> PhotosViewModel
@@ -17,16 +19,23 @@ protocol PhotosProtocol: AnyObject {
  
 protocol PhotoViewModelDelegate: AnyObject {
     func photoUpdate(at index: Int)
+    func updateUI()
 }
 
 class PhotosViewModel: PhotosProtocol {
     typealias PhotoTuple = (url: URL, data: Data)
     
     //MARK: - Variables
-    var noOfPhotos: Int = 100
     let photoURL: String = "https://source.unsplash.com/random/300x300"
     var photosData: [Int: PhotoTuple] = [:]
+    var ispagginating: Bool = false
     weak var delegate: PhotoViewModelDelegate?
+    var noOfPhotos: Int = 33 {
+        didSet {
+            fetchImageData()
+        }
+    }
+
     var count: Int {
         return photosData.count
     }
@@ -38,12 +47,26 @@ class PhotosViewModel: PhotosProtocol {
     }
     
     func fetchImageData() {
+        self.delegate?.updateUI()
+        
+        guard !ispagginating else { return }
+        
+        let group = DispatchGroup()
+        ispagginating = true
+        
         for index in 0..<noOfPhotos {
+            group.enter()
+            
             DispatchQueue.global(qos: .background).sync {
                 self.downloadImage(at: index, from: self.photoURL) {
                     self.delegate?.photoUpdate(at: index)
+                    group.leave()
                 }
             }
+        }
+        
+        group.notify(queue: .main) {
+            self.ispagginating = false
         }
     }
     
