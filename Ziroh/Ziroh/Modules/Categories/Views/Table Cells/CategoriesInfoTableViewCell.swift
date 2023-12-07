@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol CategoriesInfoProtocol: AnyObject {
+    func categoriesCollectionViewScrolling(_ scrollView: UIScrollView)
+}
+
 class CategoriesInfoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    weak var delegate: CategoriesInfoProtocol?
     
     private var contentData: [CategoriesInfo] = [] {
         didSet {
@@ -55,4 +61,7 @@ extension CategoriesInfoTableViewCell: UICollectionViewDataSource, UICollectionV
         return CGSize(width: 110, height: 160)
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        delegate?.categoriesCollectionViewScrolling(scrollView)
+    }
 }

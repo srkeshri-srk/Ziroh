@@ -27,6 +27,7 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
         case .categories(let data):
             let cell: CategoriesInfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.categoriesInfoCell, for: indexPath) as! CategoriesInfoTableViewCell
             cell.configureData(data: data)
+            cell.delegate = self
             return cell
         case .webInfo(let title, let subTitle, let date):
             let cell: WebInfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Categories.TableView.webInfoCell, for: indexPath) as! WebInfoTableViewCell

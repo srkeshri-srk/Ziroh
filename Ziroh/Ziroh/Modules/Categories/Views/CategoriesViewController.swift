@@ -142,3 +142,16 @@ extension CategoriesViewController: HeaderProtocol {
         self.present(alert, animated: true)
     }
 }
+
+
+extension CategoriesViewController: CategoriesInfoProtocol {
+    func categoriesCollectionViewScrolling(_ scrollView: UIScrollView) {
+        if let cell = self.tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? HeaderTableViewCell {
+            if scrollView.contentOffset.x > 100.0 {
+                cell.button.isHidden = false
+            } else {
+                cell.button.isHidden = true
+            }
+        }
+    }
+}
